@@ -1,0 +1,84 @@
+[
+  {
+    "description": " Como funcionario\n Eu quero acessar a pagina de pesquisa do google\n para facilitar meu trabalho",
+    "keyword": "Funcionalidade",
+    "name": "Pesquisa Google",
+    "line": 3,
+    "id": "pesquisa-google",
+    "tags": [],
+    "uri": "features\\google.feature",
+    "elements": [
+      {
+        "id": "pesquisa-google;pesquisando-no-google",
+        "keyword": "Scenario",
+        "line": 8,
+        "name": "Pesquisando no Google",
+        "tags": [],
+        "type": "scenario",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "match": {
+              "location": "features\\step_definitions\\hooks.js:9"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1005
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Dado ",
+            "line": 10,
+            "name": "que eu abra a página de pesquisa do Google \"https://www.google.com.br\"",
+            "match": {
+              "location": "features\\step_definitions\\google.js:15"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 6680
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "E ",
+            "line": 11,
+            "name": "em seguida, verifico se o título da pagina é \"Google\"",
+            "match": {
+              "location": "features\\step_definitions\\google.js:22"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 18
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Entao ",
+            "line": 12,
+            "name": "verificar se o formulário de busca Google existe",
+            "match": {
+              "location": "features\\step_definitions\\google.js:27"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 393
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "match": {
+              "location": "features\\step_definitions\\hooks.js:17"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1006
+            }
+          }
+        ]
+      }
+    ]
+  }
+]

@@ -1,0 +1,50 @@
+[
+  {
+    "description": " Como funcionario\n Eu quero acessar a pagina de pesquisa do google\n para facilitar meu trabalho",
+    "keyword": "Funcionalidade",
+    "name": "Pesquisa Google",
+    "line": 3,
+    "id": "pesquisa-google",
+    "tags": [],
+    "uri": "features\\google.feature",
+    "elements": [
+      {
+        "id": "pesquisa-google;pesquisando-no-google",
+        "keyword": "Scenario",
+        "line": 8,
+        "name": "Pesquisando no Google",
+        "tags": [],
+        "type": "scenario",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Dado ",
+            "line": 10,
+            "name": "que eu abra a página de pesquisa do Google \"https://www.google.com.br\"",
+            "result": {
+              "status": "undefined"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "E ",
+            "line": 11,
+            "name": "em seguida, verifico se o título da pagina é \"Google\"",
+            "result": {
+              "status": "undefined"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Entao ",
+            "line": 12,
+            "name": "verificar se o formulário de busca Google existe",
+            "result": {
+              "status": "undefined"
+            }
+          }
+        ]
+      }
+    ]
+  }
+]
