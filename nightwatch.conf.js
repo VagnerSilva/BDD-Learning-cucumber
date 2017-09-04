@@ -3,18 +3,18 @@ const phantomjs = require('phantomjs-prebuilt');
 const chromedriver = require('chromedriver');
 
 require('nightwatch-cucumber')({
-  //  runner: 'cucumber',
+    //  runner: 'cucumber',
     cucumberArgs: [
         '--require', 'features/step_definitions',
- //       '--require', 'features/support_files/hooks.js',
-        
-      //  '--format', 'pretty',
+        //       '--require', 'features/support_files/hooks.js',
+
+        //  '--format', 'pretty',
         '--format', 'json:features/reports/cucumber_report.json',
-      //  '--format', 'pretty:stdout',
-     //   '--require', 'features/support_files/html.report.js',
+        //  '--format', 'pretty:stdout',
+        //   '--require', 'features/support_files/html.report.js',
         'features'
-      ]
-  });
+    ]
+});
 
 module.exports = {
     src_folders: [require('nightwatch-cucumber')()],
@@ -43,6 +43,10 @@ module.exports = {
             selenium_port: 4444,
             selenium_host: 'localhost',
             silent: true,
+            request_timeout_options: {
+                timeout: 15000,
+                retry_attempts: 5
+            },
             screenshots: {
                 enabled: true,
                 on_failure: true,
