@@ -21,8 +21,13 @@
             "keyword": "Dado ",
             "line": 10,
             "name": "que eu abra a página de pesquisa do Google \"https://www.google.com.br\"",
+            "match": {
+              "location": "features\\step_definitions\\google.js:19"
+            },
             "result": {
-              "status": "undefined"
+              "status": "failed",
+              "duration": 251,
+              "error_message": "Error: Unhandled \"error\" event. ([object Object])\n    at ClientManager.emit (events.js:185:19)\n    at Nightwatch.<anonymous> (G:\\workspace\\bdd\\BDD-Learning-cucumber\\node_modules\\nightwatch\\lib\\runner\\clientmanager.js:66:10)\n    at Object.onceWrapper (events.js:316:30)\n    at emitOne (events.js:115:13)\n    at Nightwatch.emit (events.js:210:7)\n    at HttpRequest.<anonymous> (G:\\workspace\\bdd\\BDD-Learning-cucumber\\node_modules\\nightwatch\\lib\\index.js:501:10)\n    at emitThree (events.js:135:13)\n    at HttpRequest.emit (events.js:216:7)\n    at IncomingMessage.<anonymous> (G:\\workspace\\bdd\\BDD-Learning-cucumber\\node_modules\\nightwatch\\lib\\http\\request.js:168:16)\n    at emitNone (events.js:110:20)\n    at IncomingMessage.emit (events.js:207:7)\n    at endReadableNT (_stream_readable.js:1059:12)\n    at _combinedTickCallback (internal/process/next_tick.js:138:11)\n    at process._tickCallback (internal/process/next_tick.js:180:9)"
             }
           },
           {
@@ -30,8 +35,11 @@
             "keyword": "E ",
             "line": 11,
             "name": "em seguida, verifico se o título da pagina é \"Google\"",
+            "match": {
+              "location": "features\\step_definitions\\google.js:26"
+            },
             "result": {
-              "status": "undefined"
+              "status": "skipped"
             }
           },
           {
@@ -39,8 +47,11 @@
             "keyword": "Entao ",
             "line": 12,
             "name": "verificar se o formulário de busca Google existe",
+            "match": {
+              "location": "features\\step_definitions\\google.js:31"
+            },
             "result": {
-              "status": "undefined"
+              "status": "skipped"
             }
           }
         ]

@@ -1,12 +1,12 @@
-'use strict';
+// 'use strict';
 
-const { client } = require('nightwatch-cucumber');
-var {defineSupportCode} = require('cucumber');
+// const { client } = require('nightwatch-cucumber');
+// var {defineSupportCode} = require('cucumber');
 
-function CustomWorld() {
-  this.client = client;
-}
+// function CustomWorld() {
+//   this.client = client;
+// }
 
-defineSupportCode(function({setWorldConstructor}) {
-  setWorldConstructor(CustomWorld);
-});
+// defineSupportCode(function({setWorldConstructor}) {
+//   setWorldConstructor(CustomWorld);
+// });

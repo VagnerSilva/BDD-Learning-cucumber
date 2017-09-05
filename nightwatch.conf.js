@@ -2,13 +2,17 @@ const seleniumServer = require('selenium-server');
 const phantomjs = require('phantomjs-prebuilt');
 const chromedriver = require('chromedriver');
 
+const phantons = './phantomjs.exe' || './drivers/phantomjs';
+
 require('nightwatch-cucumber')({
+    // nightwatchClientAsParameter: true,
     //  runner: 'cucumber',
     cucumberArgs: [
+        '--require', 'features/support/hooks.js',
         '--require', 'features/step_definitions',
-        //       '--require', 'features/support_files/hooks.js',
+        
 
-        //  '--format', 'pretty',
+       //'--out', 'report',
         '--format', 'json:features/reports/cucumber_report.json',
         //  '--format', 'pretty:stdout',
         //   '--require', 'features/support_files/html.report.js',
@@ -17,7 +21,7 @@ require('nightwatch-cucumber')({
 });
 
 module.exports = {
-    src_folders: [require('nightwatch-cucumber')()],
+    src_folders: ['features'],
     output_folder: 'features/reports',
     custom_commands_path: '',
     custom_assertions_path: '',
@@ -47,17 +51,24 @@ module.exports = {
                 timeout: 15000,
                 retry_attempts: 5
             },
-            screenshots: {
-                enabled: true,
-                on_failure: true,
-                on_error: false,
-                path: 'features/screenshots/default'
-            },
+            // screenshots: {
+            //     enabled: true,
+            //     on_failure: true,
+            //     on_error: false,
+            //     path: 'features/screenshots/default'
+            // },
             desiredCapabilities: {
                 browserName: 'phantomjs',
                 javascriptEnabled: true,
+                databaseEnabled: true,
+                locationContextEnabled: true,
+                applicationCacheEnabled: true,
+                browserConnectionEnabled: true,
+                webStorageEnabled: true,
                 acceptSslCerts: true,
-                'phantomjs.binary.path': phantomjs.path
+                rotatable: true,
+                nativeEvents: true,
+                'phantomjs.binary.path': phantons
             }
         },
 
@@ -65,9 +76,16 @@ module.exports = {
             desiredCapabilities: {
                 browserName: 'chrome',
                 javascriptEnabled: true,
+                databaseEnabled: true,
+                locationContextEnabled: true,
+                applicationCacheEnabled: true,
+                browserConnectionEnabled: true,
+                webStorageEnabled: true,
                 acceptSslCerts: true,
-                "chromeOptions": {
-                    "args": ["window-size=1920,1080"]
+                rotatable: true,
+                nativeEvents: true,
+                chromeOptions: {
+                    args: ["window-size=1920,1080"]
                 }
             },
             selenium: {
@@ -81,9 +99,17 @@ module.exports = {
             desiredCapabilities: {
                 browserName: 'firefox',
                 javascriptEnabled: true,
-                acceptSslCerts: true
+                databaseEnabled: true,
+                locationContextEnabled: true,
+                applicationCacheEnabled: true,
+                browserConnectionEnabled: true,
+                webStorageEnabled: true,
+                acceptSslCerts: true,
+                rotatable: true,
+                nativeEvents: true,
             }
         }
     }
 };
+
 
